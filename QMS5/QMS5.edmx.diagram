@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="9c2fcb01f9d74b20bef9eb58e6daf8c9" Name="DiagramQMS5">
+        <EntityTypeShape EntityType="QMSModel.Document" Width="1.5" PointX="3" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QMSModel.DocumentAction" Width="1.5" PointX="0.75" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="QMSModel.DocumentStatu" Width="1.5" PointX="0.75" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="QMSModel.DocumentType" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QMSModel.Staff" Width="1.5" PointX="5.75" PointY="2.25" IsExpanded="true" FillColor="192, 0, 0" />
+        <AssociationConnector Association="QMSModel.FK_Document_DocumentAction_ActionID" ManuallyRouted="false" />
+        <AssociationConnector Association="QMSModel.FK_Document_DocumentStatus_StatusID" ManuallyRouted="false" />
+        <AssociationConnector Association="QMSModel.FK_Document_DocumentType_TypeID" ManuallyRouted="false" />
+        <AssociationConnector Association="QMSModel.FK_Document_Staff_AuthorID" />
+        <AssociationConnector Association="QMSModel.FK_Document_Staff_ManagerID" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

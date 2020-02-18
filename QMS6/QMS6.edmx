@@ -1,0 +1,960 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Model1.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="Model1StoreContainer">
+    <EntitySet Name="Audits" EntityType="Model1.Store.Audits" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AuditStatus" EntityType="Model1.Store.AuditStatus" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AuditTypes" EntityType="Model1.Store.AuditTypes" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AuditPresentations" EntityType="Model1.Store.AuditPresentations" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Staffs" EntityType="Model1.Store.Staffs" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AuditActionPlans" EntityType="Model1.Store.AuditActionPlans" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AuditMethods" EntityType="Model1.Store.AuditMethods" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AuditOutcomes" EntityType="Model1.Store.AuditOutcomes" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AuditFrequencies" EntityType="Model1.Store.AuditFrequencies" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AuditStandards" EntityType="Model1.Store.AuditStandards" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="IRMERAudits" EntityType="Model1.Store.IRMERAudits" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="RegularAudits" EntityType="Model1.Store.RegularAudits" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AuditSOPs" EntityType="Model1.Store.AuditSOPs" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="RegularAuditsAudits" EntityType="Model1.Store.RegularAuditsAudits" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="IRMERAuditsAudits1" EntityType="Model1.Store.IRMERAuditsAudits1" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="IRMERAuditsAuditFrequencies" Association="Model1.Store.IRMERAuditsAuditFrequencies">
+      <End Role="IRMERAudits" EntitySet="IRMERAudits" />
+      <End Role="AuditFrequencies" EntitySet="AuditFrequencies" />
+    </AssociationSet>
+    <AssociationSet Name="AuditsAuditTypes" Association="Model1.Store.AuditsAuditTypes">
+      <End Role="Audits" EntitySet="Audits" />
+      <End Role="AuditTypes" EntitySet="AuditTypes" />
+    </AssociationSet>
+    <AssociationSet Name="AuditPresentationsAudits" Association="Model1.Store.AuditPresentationsAudits">
+      <End Role="AuditPresentations" EntitySet="AuditPresentations" />
+      <End Role="Audits" EntitySet="Audits" />
+    </AssociationSet>
+    <AssociationSet Name="AuditActionPlansAudits" Association="Model1.Store.AuditActionPlansAudits">
+      <End Role="AuditActionPlans" EntitySet="AuditActionPlans" />
+      <End Role="Audits" EntitySet="Audits" />
+    </AssociationSet>
+    <AssociationSet Name="AuditSOPsAudits" Association="Model1.Store.AuditSOPsAudits">
+      <End Role="AuditSOPs" EntitySet="AuditSOPs" />
+      <End Role="Audits" EntitySet="Audits" />
+    </AssociationSet>
+    <AssociationSet Name="AuditStandardsAudits" Association="Model1.Store.AuditStandardsAudits">
+      <End Role="AuditStandards" EntitySet="AuditStandards" />
+      <End Role="Audits" EntitySet="Audits" />
+    </AssociationSet>
+    <AssociationSet Name="AuditMethodsAudits" Association="Model1.Store.AuditMethodsAudits">
+      <End Role="AuditMethods" EntitySet="AuditMethods" />
+      <End Role="Audits" EntitySet="Audits" />
+    </AssociationSet>
+    <AssociationSet Name="AuditOutcomesAudits" Association="Model1.Store.AuditOutcomesAudits">
+      <End Role="AuditOutcomes" EntitySet="AuditOutcomes" />
+      <End Role="Audits" EntitySet="Audits" />
+    </AssociationSet>
+    <AssociationSet Name="AuditStatusAudits" Association="Model1.Store.AuditStatusAudits">
+      <End Role="AuditStatus" EntitySet="AuditStatus" />
+      <End Role="Audits" EntitySet="Audits" />
+    </AssociationSet>
+    <AssociationSet Name="StaffAudits" Association="Model1.Store.StaffAudits">
+      <End Role="Staff" EntitySet="Staffs" />
+      <End Role="Audits" EntitySet="Audits" />
+    </AssociationSet>
+    <AssociationSet Name="StaffAudits1" Association="Model1.Store.StaffAudits1">
+      <End Role="Staff" EntitySet="Staffs" />
+      <End Role="Audits" EntitySet="Audits" />
+    </AssociationSet>
+    <AssociationSet Name="AuditPresentationsStaff" Association="Model1.Store.AuditPresentationsStaff">
+      <End Role="AuditPresentations" EntitySet="AuditPresentations" />
+      <End Role="Staff" EntitySet="Staffs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RegularAuditsAudits_RegularAudits" Association="Model1.Store.FK_RegularAuditsAudits_RegularAudits">
+      <End Role="RegularAudits" EntitySet="RegularAudits" />
+      <End Role="RegularAuditsAudits" EntitySet="RegularAuditsAudits" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RegularAuditsAudits_Audits" Association="Model1.Store.FK_RegularAuditsAudits_Audits">
+      <End Role="Audits" EntitySet="Audits" />
+      <End Role="RegularAuditsAudits" EntitySet="RegularAuditsAudits" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IRMERAuditsAudits1_IRMERAudits" Association="Model1.Store.FK_IRMERAuditsAudits1_IRMERAudits">
+      <End Role="IRMERAudits" EntitySet="IRMERAudits" />
+      <End Role="IRMERAuditsAudits1" EntitySet="IRMERAuditsAudits1" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IRMERAuditsAudits1_Audits" Association="Model1.Store.FK_IRMERAuditsAudits1_Audits">
+      <End Role="Audits" EntitySet="Audits" />
+      <End Role="IRMERAuditsAudits1" EntitySet="IRMERAuditsAudits1" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Audits">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TypeID" Type="smallint" Nullable="false" />
+    <Property Name="StatusID" Type="smallint" Nullable="false" />
+    <Property Name="MethodID" Type="smallint" Nullable="false" />
+    <Property Name="ActionPlanID" Type="smallint" Nullable="false" />
+    <Property Name="OutcomeID" Type="smallint" Nullable="false" />
+    <Property Name="PresentationID" Type="smallint" Nullable="false" />
+    <Property Name="StandardsID" Type="smallint" Nullable="false" />
+    <Property Name="AuthorID" Type="smallint" Nullable="false" />
+    <Property Name="ManagerID" Type="smallint" Nullable="false" />
+    <Property Name="Reference" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="OwnerID" Type="smallint" Nullable="false" />
+    <Property Name="RoleID" Type="smallint" Nullable="false" />
+    <Property Name="AuditID" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="IRMERAuditID" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="AuditTypes_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AuditStatus">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Status" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Audits_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AuditTypes">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Type" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AuditPresentations">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PresentationDate" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="PresenterID" Type="smallint" Nullable="false" />
+    <Property Name="Presentation" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Audits_Id" Type="int" Nullable="false" />
+    <Property Name="Staffs_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Staffs">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FIrstName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="LastName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="EMail" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Author_Id" Type="int" Nullable="false" />
+    <Property Name="Manager_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AuditActionPlans">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ActionPlan" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Audits_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AuditMethods">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Method" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Audits_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AuditOutcomes">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Outcome" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Audits_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AuditFrequencies">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Frequency" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AuditStandards">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Audits_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="IRMERAudits">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Code" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Desscription" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="FrequencyID" Type="smallint" Nullable="false" />
+    <Property Name="SOPID" Type="smallint" Nullable="false" />
+    <Property Name="AuditFrequencies_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="RegularAudits">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CreationDate" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Description" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AuditSOPs">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SOP" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Audits_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="RegularAuditsAudits">
+    <Key>
+      <PropertyRef Name="RegularAudit_Id" />
+      <PropertyRef Name="Audits_Id" />
+    </Key>
+    <Property Name="RegularAudit_Id" Type="int" Nullable="false" />
+    <Property Name="Audits_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="IRMERAuditsAudits1">
+    <Key>
+      <PropertyRef Name="IRMERAudit1_Id" />
+      <PropertyRef Name="AuditEvents_Id" />
+    </Key>
+    <Property Name="IRMERAudit1_Id" Type="int" Nullable="false" />
+    <Property Name="AuditEvents_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="IRMERAuditsAuditFrequencies">
+    <End Role="IRMERAudits" Type="Model1.Store.IRMERAudits" Multiplicity="*" />
+    <End Role="AuditFrequencies" Type="Model1.Store.AuditFrequencies" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="AuditFrequencies">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="IRMERAudits">
+        <PropertyRef Name="AuditFrequencies_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="AuditsAuditTypes">
+    <End Role="Audits" Type="Model1.Store.Audits" Multiplicity="*" />
+    <End Role="AuditTypes" Type="Model1.Store.AuditTypes" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="AuditTypes">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Audits">
+        <PropertyRef Name="AuditTypes_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="AuditPresentationsAudits">
+    <End Role="AuditPresentations" Type="Model1.Store.AuditPresentations" Multiplicity="*" />
+    <End Role="Audits" Type="Model1.Store.Audits" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Audits">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AuditPresentations">
+        <PropertyRef Name="Audits_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="AuditActionPlansAudits">
+    <End Role="AuditActionPlans" Type="Model1.Store.AuditActionPlans" Multiplicity="*" />
+    <End Role="Audits" Type="Model1.Store.Audits" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Audits">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AuditActionPlans">
+        <PropertyRef Name="Audits_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="AuditSOPsAudits">
+    <End Role="AuditSOPs" Type="Model1.Store.AuditSOPs" Multiplicity="*" />
+    <End Role="Audits" Type="Model1.Store.Audits" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Audits">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AuditSOPs">
+        <PropertyRef Name="Audits_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="AuditStandardsAudits">
+    <End Role="AuditStandards" Type="Model1.Store.AuditStandards" Multiplicity="*" />
+    <End Role="Audits" Type="Model1.Store.Audits" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Audits">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AuditStandards">
+        <PropertyRef Name="Audits_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="AuditMethodsAudits">
+    <End Role="AuditMethods" Type="Model1.Store.AuditMethods" Multiplicity="*" />
+    <End Role="Audits" Type="Model1.Store.Audits" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Audits">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AuditMethods">
+        <PropertyRef Name="Audits_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="AuditOutcomesAudits">
+    <End Role="AuditOutcomes" Type="Model1.Store.AuditOutcomes" Multiplicity="*" />
+    <End Role="Audits" Type="Model1.Store.Audits" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Audits">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AuditOutcomes">
+        <PropertyRef Name="Audits_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="AuditStatusAudits">
+    <End Role="AuditStatus" Type="Model1.Store.AuditStatus" Multiplicity="*" />
+    <End Role="Audits" Type="Model1.Store.Audits" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Audits">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AuditStatus">
+        <PropertyRef Name="Audits_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="StaffAudits">
+    <End Role="Staff" Type="Model1.Store.Staffs" Multiplicity="*" />
+    <End Role="Audits" Type="Model1.Store.Audits" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Audits">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Staff">
+        <PropertyRef Name="Author_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="StaffAudits1">
+    <End Role="Staff" Type="Model1.Store.Staffs" Multiplicity="*" />
+    <End Role="Audits" Type="Model1.Store.Audits" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Audits">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Staff">
+        <PropertyRef Name="Manager_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="AuditPresentationsStaff">
+    <End Role="AuditPresentations" Type="Model1.Store.AuditPresentations" Multiplicity="*" />
+    <End Role="Staff" Type="Model1.Store.Staffs" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Staff">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AuditPresentations">
+        <PropertyRef Name="Staffs_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RegularAuditsAudits_RegularAudits">
+    <End Role="RegularAudits" Type="Model1.Store.RegularAudits" Multiplicity="1" />
+    <End Role="RegularAuditsAudits" Type="Model1.Store.RegularAuditsAudits" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RegularAudits">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="RegularAuditsAudits">
+        <PropertyRef Name="RegularAudit_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RegularAuditsAudits_Audits">
+    <End Role="RegularAuditsAudits" Type="Model1.Store.RegularAuditsAudits" Multiplicity="*" />
+    <End Role="Audits" Type="Model1.Store.Audits" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Audits">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="RegularAuditsAudits">
+        <PropertyRef Name="Audits_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IRMERAuditsAudits1_IRMERAudits">
+    <End Role="IRMERAudits" Type="Model1.Store.IRMERAudits" Multiplicity="1" />
+    <End Role="IRMERAuditsAudits1" Type="Model1.Store.IRMERAuditsAudits1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="IRMERAudits">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="IRMERAuditsAudits1">
+        <PropertyRef Name="IRMERAudit1_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IRMERAuditsAudits1_Audits">
+    <End Role="IRMERAuditsAudits1" Type="Model1.Store.IRMERAuditsAudits1" Multiplicity="*" />
+    <End Role="Audits" Type="Model1.Store.Audits" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Audits">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="IRMERAuditsAudits1">
+        <PropertyRef Name="AuditEvents_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="Model1" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+        <EntityContainer Name="Model1Container" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Audits" EntityType="Model1.Audits" />
+          <EntitySet Name="AuditStatus" EntityType="Model1.AuditStatus" />
+          <EntitySet Name="AuditTypes" EntityType="Model1.AuditTypes" />
+          <EntitySet Name="AuditPresentations" EntityType="Model1.AuditPresentations" />
+          <EntitySet Name="Staffs" EntityType="Model1.Staff" />
+          <EntitySet Name="AuditActionPlans" EntityType="Model1.AuditActionPlans" />
+          <EntitySet Name="AuditMethods" EntityType="Model1.AuditMethods" />
+          <EntitySet Name="AuditOutcomes" EntityType="Model1.AuditOutcomes" />
+          <EntitySet Name="AuditFrequencies" EntityType="Model1.AuditFrequencies" />
+          <EntitySet Name="AuditStandards" EntityType="Model1.AuditStandards" />
+          <EntitySet Name="IRMERAudits" EntityType="Model1.IRMERAudits" />
+          <EntitySet Name="RegularAudits" EntityType="Model1.RegularAudits" />
+          <AssociationSet Name="IRMERAuditsAuditFrequencies" Association="Model1.IRMERAuditsAuditFrequencies">
+            <End Role="IRMERAudits" EntitySet="IRMERAudits" />
+            <End Role="AuditFrequencies" EntitySet="AuditFrequencies" />
+          </AssociationSet>
+          <AssociationSet Name="AuditsAuditTypes" Association="Model1.AuditsAuditTypes">
+            <End Role="Audits" EntitySet="Audits" />
+            <End Role="AuditTypes" EntitySet="AuditTypes" />
+          </AssociationSet>
+          <AssociationSet Name="AuditPresentationsAudits" Association="Model1.AuditPresentationsAudits">
+            <End Role="AuditPresentations" EntitySet="AuditPresentations" />
+            <End Role="Audits" EntitySet="Audits" />
+          </AssociationSet>
+          <AssociationSet Name="AuditActionPlansAudits" Association="Model1.AuditActionPlansAudits">
+            <End Role="AuditActionPlans" EntitySet="AuditActionPlans" />
+            <End Role="Audits" EntitySet="Audits" />
+          </AssociationSet>
+          <AssociationSet Name="AuditSOPsAudits" Association="Model1.AuditSOPsAudits">
+            <End Role="AuditSOPs" EntitySet="AuditSOPs" />
+            <End Role="Audits" EntitySet="Audits" />
+          </AssociationSet>
+          <AssociationSet Name="AuditStandardsAudits" Association="Model1.AuditStandardsAudits">
+            <End Role="AuditStandards" EntitySet="AuditStandards" />
+            <End Role="Audits" EntitySet="Audits" />
+          </AssociationSet>
+          <AssociationSet Name="AuditMethodsAudits" Association="Model1.AuditMethodsAudits">
+            <End Role="AuditMethods" EntitySet="AuditMethods" />
+            <End Role="Audits" EntitySet="Audits" />
+          </AssociationSet>
+          <AssociationSet Name="AuditOutcomesAudits" Association="Model1.AuditOutcomesAudits">
+            <End Role="AuditOutcomes" EntitySet="AuditOutcomes" />
+            <End Role="Audits" EntitySet="Audits" />
+          </AssociationSet>
+          <AssociationSet Name="AuditStatusAudits" Association="Model1.AuditStatusAudits">
+            <End Role="AuditStatus" EntitySet="AuditStatus" />
+            <End Role="Audits" EntitySet="Audits" />
+          </AssociationSet>
+          <AssociationSet Name="StaffAudits" Association="Model1.StaffAudits">
+            <End Role="Staff" EntitySet="Staffs" />
+            <End Role="Audits" EntitySet="Audits" />
+          </AssociationSet>
+          <AssociationSet Name="StaffAudits1" Association="Model1.StaffAudits1">
+            <End Role="Staff" EntitySet="Staffs" />
+            <End Role="Audits" EntitySet="Audits" />
+          </AssociationSet>
+          <AssociationSet Name="AuditPresentationsStaff" Association="Model1.AuditPresentationsStaff">
+            <End Role="AuditPresentations" EntitySet="AuditPresentations" />
+            <End Role="Staff" EntitySet="Staffs" />
+          </AssociationSet>
+          <AssociationSet Name="RegularAuditsAudits" Association="Model1.RegularAuditsAudits">
+            <End Role="RegularAudits" EntitySet="RegularAudits" />
+            <End Role="Audits" EntitySet="Audits" />
+          </AssociationSet>
+          <AssociationSet Name="IRMERAuditsAudits1" Association="Model1.IRMERAuditsAudits1">
+            <End Role="IRMERAudits" EntitySet="IRMERAudits" />
+            <End Role="Audits" EntitySet="Audits" />
+          </AssociationSet>
+          <EntitySet Name="AuditSOPs" EntityType="Model1.AuditSOPs" />
+        </EntityContainer>
+        <EntityType Name="Audits">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TypeID" Type="Int16" Nullable="false" />
+          <Property Name="StatusID" Type="Int16" Nullable="false" />
+          <Property Name="MethodID" Type="Int16" Nullable="false" />
+          <Property Name="ActionPlanID" Type="Int16" Nullable="false" />
+          <Property Name="OutcomeID" Type="Int16" Nullable="false" />
+          <Property Name="PresentationID" Type="Int16" Nullable="false" />
+          <Property Name="StandardsID" Type="Int16" Nullable="false" />
+          <Property Name="AuthorID" Type="Int16" Nullable="false" />
+          <Property Name="ManagerID" Type="Int16" Nullable="false" />
+          <Property Name="Reference" Type="String" Nullable="false" />
+          <Property Name="OwnerID" Type="Int16" Nullable="false" />
+          <Property Name="RoleID" Type="Int16" Nullable="false" />
+          <NavigationProperty Name="AuditTypes" Relationship="Model1.AuditsAuditTypes" FromRole="Audits" ToRole="AuditTypes" />
+          <NavigationProperty Name="AuditPresentation" Relationship="Model1.AuditPresentationsAudits" FromRole="Audits" ToRole="AuditPresentations" />
+          <NavigationProperty Name="AuditActionPlan" Relationship="Model1.AuditActionPlansAudits" FromRole="Audits" ToRole="AuditActionPlans" />
+          <NavigationProperty Name="AuditSOP" Relationship="Model1.AuditSOPsAudits" FromRole="Audits" ToRole="AuditSOPs" />
+          <NavigationProperty Name="AuditStandard" Relationship="Model1.AuditStandardsAudits" FromRole="Audits" ToRole="AuditStandards" />
+          <NavigationProperty Name="AuditMethod" Relationship="Model1.AuditMethodsAudits" FromRole="Audits" ToRole="AuditMethods" />
+          <NavigationProperty Name="AuditOutcome" Relationship="Model1.AuditOutcomesAudits" FromRole="Audits" ToRole="AuditOutcomes" />
+          <NavigationProperty Name="AuditStatu" Relationship="Model1.AuditStatusAudits" FromRole="Audits" ToRole="AuditStatus" />
+          <NavigationProperty Name="Author" Relationship="Model1.StaffAudits" FromRole="Audits" ToRole="Staff" />
+          <NavigationProperty Name="Manager" Relationship="Model1.StaffAudits1" FromRole="Audits" ToRole="Staff" />
+          <NavigationProperty Name="RegularAudit" Relationship="Model1.RegularAuditsAudits" FromRole="Audits" ToRole="RegularAudits" />
+          <Property Name="AuditID" Type="String" Nullable="false" />
+          <Property Name="IRMERAuditID" Type="String" Nullable="false" />
+          <NavigationProperty Name="IRMERAudit1" Relationship="Model1.IRMERAuditsAudits1" FromRole="Audits" ToRole="IRMERAudits" />
+        </EntityType>
+        <EntityType Name="AuditStatus">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Status" Type="String" Nullable="false" />
+          <NavigationProperty Name="Audits" Relationship="Model1.AuditStatusAudits" FromRole="AuditStatus" ToRole="Audits" />
+        </EntityType>
+        <EntityType Name="AuditTypes">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Type" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="Audit" Relationship="Model1.AuditsAuditTypes" FromRole="AuditTypes" ToRole="Audits" />
+        </EntityType>
+        <EntityType Name="AuditPresentations">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PresentationDate" Type="String" Nullable="false" />
+          <Property Name="PresenterID" Type="Int16" Nullable="false" />
+          <Property Name="Presentation" Type="String" Nullable="false" />
+          <NavigationProperty Name="Audits" Relationship="Model1.AuditPresentationsAudits" FromRole="AuditPresentations" ToRole="Audits" />
+          <NavigationProperty Name="Staffs" Relationship="Model1.AuditPresentationsStaff" FromRole="AuditPresentations" ToRole="Staff" />
+        </EntityType>
+        <EntityType Name="Staff">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FIrstName" Type="String" Nullable="false" />
+          <Property Name="LastName" Type="String" Nullable="false" />
+          <Property Name="EMail" Type="String" Nullable="false" />
+          <NavigationProperty Name="Author" Relationship="Model1.StaffAudits" FromRole="Staff" ToRole="Audits" />
+          <NavigationProperty Name="Manager" Relationship="Model1.StaffAudits1" FromRole="Staff" ToRole="Audits" />
+          <NavigationProperty Name="AuditPresentation" Relationship="Model1.AuditPresentationsStaff" FromRole="Staff" ToRole="AuditPresentations" />
+        </EntityType>
+        <EntityType Name="AuditActionPlans">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ActionPlan" Type="String" Nullable="false" />
+          <NavigationProperty Name="Audits" Relationship="Model1.AuditActionPlansAudits" FromRole="AuditActionPlans" ToRole="Audits" />
+        </EntityType>
+        <EntityType Name="AuditMethods">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Method" Type="String" Nullable="false" />
+          <NavigationProperty Name="Audits" Relationship="Model1.AuditMethodsAudits" FromRole="AuditMethods" ToRole="Audits" />
+        </EntityType>
+        <EntityType Name="AuditOutcomes">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Outcome" Type="String" Nullable="false" />
+          <NavigationProperty Name="Audits" Relationship="Model1.AuditOutcomesAudits" FromRole="AuditOutcomes" ToRole="Audits" />
+        </EntityType>
+        <EntityType Name="AuditFrequencies">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Frequency" Type="String" Nullable="false" />
+          <NavigationProperty Name="IRMERAudit" Relationship="Model1.IRMERAuditsAuditFrequencies" FromRole="AuditFrequencies" ToRole="IRMERAudits" />
+        </EntityType>
+        <EntityType Name="AuditStandards">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="Audits" Relationship="Model1.AuditStandardsAudits" FromRole="AuditStandards" ToRole="Audits" />
+        </EntityType>
+        <EntityType Name="AuditSOPs">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SOP" Type="String" Nullable="false" />
+          <NavigationProperty Name="Audits" Relationship="Model1.AuditSOPsAudits" FromRole="AuditSOPs" ToRole="Audits" />
+        </EntityType>
+        <EntityType Name="IRMERAudits">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Code" Type="String" Nullable="false" />
+          <Property Name="Name" Type="String" Nullable="false" />
+          <Property Name="Desscription" Type="String" Nullable="false" />
+          <Property Name="FrequencyID" Type="Int16" Nullable="false" />
+          <Property Name="SOPID" Type="Int16" Nullable="false" />
+          <NavigationProperty Name="AuditFrequencies" Relationship="Model1.IRMERAuditsAuditFrequencies" FromRole="IRMERAudits" ToRole="AuditFrequencies" />
+          <NavigationProperty Name="AuditEvents" Relationship="Model1.IRMERAuditsAudits1" FromRole="IRMERAudits" ToRole="Audits" />
+          </EntityType>
+        <EntityType Name="RegularAudits">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="Audits" Relationship="Model1.RegularAuditsAudits" FromRole="RegularAudits" ToRole="Audits" />
+          <Property Name="CreationDate" Type="String" Nullable="false" />
+          <Property Name="Name" Type="String" Nullable="false" />
+          <Property Name="Description" Type="String" Nullable="false" />
+        </EntityType>
+        <Association Name="IRMERAuditsAuditFrequencies">
+          <End Type="Model1.IRMERAudits" Role="IRMERAudits" Multiplicity="1" />
+          <End Type="Model1.AuditFrequencies" Role="AuditFrequencies" Multiplicity="1" />
+        </Association>
+        <Association Name="AuditsAuditTypes">
+          <End Type="Model1.Audits" Role="Audits" Multiplicity="1" />
+          <End Type="Model1.AuditTypes" Role="AuditTypes" Multiplicity="1" />
+        </Association>
+        <Association Name="AuditPresentationsAudits">
+          <End Type="Model1.AuditPresentations" Role="AuditPresentations" Multiplicity="0..1" />
+          <End Type="Model1.Audits" Role="Audits" Multiplicity="1" />
+        </Association>
+        <Association Name="AuditActionPlansAudits">
+          <End Type="Model1.AuditActionPlans" Role="AuditActionPlans" Multiplicity="0..1" />
+          <End Type="Model1.Audits" Role="Audits" Multiplicity="1" />
+        </Association>
+        <Association Name="AuditSOPsAudits">
+          <End Type="Model1.AuditSOPs" Role="AuditSOPs" Multiplicity="1" />
+          <End Type="Model1.Audits" Role="Audits" Multiplicity="1" />
+        </Association>
+        <Association Name="AuditStandardsAudits">
+          <End Type="Model1.AuditStandards" Role="AuditStandards" Multiplicity="0..1" />
+          <End Type="Model1.Audits" Role="Audits" Multiplicity="1" />
+        </Association>
+        <Association Name="AuditMethodsAudits">
+          <End Type="Model1.AuditMethods" Role="AuditMethods" Multiplicity="1" />
+          <End Type="Model1.Audits" Role="Audits" Multiplicity="1" />
+        </Association>
+        <Association Name="AuditOutcomesAudits">
+          <End Type="Model1.AuditOutcomes" Role="AuditOutcomes" Multiplicity="1" />
+          <End Type="Model1.Audits" Role="Audits" Multiplicity="1" />
+        </Association>
+        <Association Name="AuditStatusAudits">
+          <End Type="Model1.AuditStatus" Role="AuditStatus" Multiplicity="1" />
+          <End Type="Model1.Audits" Role="Audits" Multiplicity="1" />
+        </Association>
+        <Association Name="StaffAudits">
+          <End Type="Model1.Staff" Role="Staff" Multiplicity="1" />
+          <End Type="Model1.Audits" Role="Audits" Multiplicity="1" />
+        </Association>
+        <Association Name="StaffAudits1">
+          <End Type="Model1.Staff" Role="Staff" Multiplicity="1" />
+          <End Type="Model1.Audits" Role="Audits" Multiplicity="1" />
+        </Association>
+        <Association Name="AuditPresentationsStaff">
+          <End Type="Model1.AuditPresentations" Role="AuditPresentations" Multiplicity="1" />
+          <End Type="Model1.Staff" Role="Staff" Multiplicity="1" />
+        </Association>
+        <Association Name="RegularAuditsAudits">
+          <End Type="Model1.RegularAudits" Role="RegularAudits" Multiplicity="*" />
+          <End Type="Model1.Audits" Role="Audits" Multiplicity="*" />
+        </Association>
+        <Association Name="IRMERAuditsAudits1">
+          <End Type="Model1.IRMERAudits" Role="IRMERAudits" Multiplicity="*" />
+          <End Type="Model1.Audits" Role="Audits" Multiplicity="*" />
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Model1StoreContainer" CdmEntityContainer="Model1Container">
+    <EntitySetMapping Name="Audits">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Audits)">
+        <MappingFragment StoreEntitySet="Audits">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TypeID" ColumnName="TypeID" />
+          <ScalarProperty Name="StatusID" ColumnName="StatusID" />
+          <ScalarProperty Name="MethodID" ColumnName="MethodID" />
+          <ScalarProperty Name="ActionPlanID" ColumnName="ActionPlanID" />
+          <ScalarProperty Name="OutcomeID" ColumnName="OutcomeID" />
+          <ScalarProperty Name="PresentationID" ColumnName="PresentationID" />
+          <ScalarProperty Name="StandardsID" ColumnName="StandardsID" />
+          <ScalarProperty Name="AuthorID" ColumnName="AuthorID" />
+          <ScalarProperty Name="ManagerID" ColumnName="ManagerID" />
+          <ScalarProperty Name="Reference" ColumnName="Reference" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+          <ScalarProperty Name="AuditID" ColumnName="AuditID" />
+          <ScalarProperty Name="IRMERAuditID" ColumnName="IRMERAuditID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AuditStatus">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.AuditStatus)">
+        <MappingFragment StoreEntitySet="AuditStatus">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AuditTypes">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.AuditTypes)">
+        <MappingFragment StoreEntitySet="AuditTypes">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AuditPresentations">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.AuditPresentations)">
+        <MappingFragment StoreEntitySet="AuditPresentations">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="PresentationDate" ColumnName="PresentationDate" />
+          <ScalarProperty Name="PresenterID" ColumnName="PresenterID" />
+          <ScalarProperty Name="Presentation" ColumnName="Presentation" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Staffs">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Staff)">
+        <MappingFragment StoreEntitySet="Staffs">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="FIrstName" ColumnName="FIrstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="EMail" ColumnName="EMail" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AuditActionPlans">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.AuditActionPlans)">
+        <MappingFragment StoreEntitySet="AuditActionPlans">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ActionPlan" ColumnName="ActionPlan" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AuditMethods">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.AuditMethods)">
+        <MappingFragment StoreEntitySet="AuditMethods">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Method" ColumnName="Method" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AuditOutcomes">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.AuditOutcomes)">
+        <MappingFragment StoreEntitySet="AuditOutcomes">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Outcome" ColumnName="Outcome" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AuditFrequencies">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.AuditFrequencies)">
+        <MappingFragment StoreEntitySet="AuditFrequencies">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Frequency" ColumnName="Frequency" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AuditStandards">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.AuditStandards)">
+        <MappingFragment StoreEntitySet="AuditStandards">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IRMERAudits">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.IRMERAudits)">
+        <MappingFragment StoreEntitySet="IRMERAudits">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Desscription" ColumnName="Desscription" />
+          <ScalarProperty Name="FrequencyID" ColumnName="FrequencyID" />
+          <ScalarProperty Name="SOPID" ColumnName="SOPID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RegularAudits">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.RegularAudits)">
+        <MappingFragment StoreEntitySet="RegularAudits">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AuditSOPs">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.AuditSOPs)">
+        <MappingFragment StoreEntitySet="AuditSOPs">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="SOP" ColumnName="SOP" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="IRMERAuditsAuditFrequencies" TypeName="Model1.IRMERAuditsAuditFrequencies" StoreEntitySet="IRMERAudits">
+      <EndProperty Name="AuditFrequencies">
+        <ScalarProperty Name="Id" ColumnName="AuditFrequencies_Id" />
+      </EndProperty>
+      <EndProperty Name="IRMERAudits">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="AuditsAuditTypes" TypeName="Model1.AuditsAuditTypes" StoreEntitySet="Audits">
+      <EndProperty Name="AuditTypes">
+        <ScalarProperty Name="Id" ColumnName="AuditTypes_Id" />
+      </EndProperty>
+      <EndProperty Name="Audits">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="AuditPresentationsAudits" TypeName="Model1.AuditPresentationsAudits" StoreEntitySet="AuditPresentations">
+      <EndProperty Name="Audits">
+        <ScalarProperty Name="Id" ColumnName="Audits_Id" />
+      </EndProperty>
+      <EndProperty Name="AuditPresentations">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="AuditActionPlansAudits" TypeName="Model1.AuditActionPlansAudits" StoreEntitySet="AuditActionPlans">
+      <EndProperty Name="Audits">
+        <ScalarProperty Name="Id" ColumnName="Audits_Id" />
+      </EndProperty>
+      <EndProperty Name="AuditActionPlans">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="AuditSOPsAudits" TypeName="Model1.AuditSOPsAudits" StoreEntitySet="AuditSOPs">
+      <EndProperty Name="Audits">
+        <ScalarProperty Name="Id" ColumnName="Audits_Id" />
+      </EndProperty>
+      <EndProperty Name="AuditSOPs">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="AuditStandardsAudits" TypeName="Model1.AuditStandardsAudits" StoreEntitySet="AuditStandards">
+      <EndProperty Name="Audits">
+        <ScalarProperty Name="Id" ColumnName="Audits_Id" />
+      </EndProperty>
+      <EndProperty Name="AuditStandards">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="AuditMethodsAudits" TypeName="Model1.AuditMethodsAudits" StoreEntitySet="AuditMethods">
+      <EndProperty Name="Audits">
+        <ScalarProperty Name="Id" ColumnName="Audits_Id" />
+      </EndProperty>
+      <EndProperty Name="AuditMethods">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="AuditOutcomesAudits" TypeName="Model1.AuditOutcomesAudits" StoreEntitySet="AuditOutcomes">
+      <EndProperty Name="Audits">
+        <ScalarProperty Name="Id" ColumnName="Audits_Id" />
+      </EndProperty>
+      <EndProperty Name="AuditOutcomes">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="AuditStatusAudits" TypeName="Model1.AuditStatusAudits" StoreEntitySet="AuditStatus">
+      <EndProperty Name="Audits">
+        <ScalarProperty Name="Id" ColumnName="Audits_Id" />
+      </EndProperty>
+      <EndProperty Name="AuditStatus">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="StaffAudits" TypeName="Model1.StaffAudits" StoreEntitySet="Staffs">
+      <EndProperty Name="Audits">
+        <ScalarProperty Name="Id" ColumnName="Author_Id" />
+      </EndProperty>
+      <EndProperty Name="Staff">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="StaffAudits1" TypeName="Model1.StaffAudits1" StoreEntitySet="Staffs">
+      <EndProperty Name="Audits">
+        <ScalarProperty Name="Id" ColumnName="Manager_Id" />
+      </EndProperty>
+      <EndProperty Name="Staff">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="AuditPresentationsStaff" TypeName="Model1.AuditPresentationsStaff" StoreEntitySet="AuditPresentations">
+      <EndProperty Name="Staff">
+        <ScalarProperty Name="Id" ColumnName="Staffs_Id" />
+      </EndProperty>
+      <EndProperty Name="AuditPresentations">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="RegularAuditsAudits" TypeName="Model1.RegularAuditsAudits" StoreEntitySet="RegularAuditsAudits">
+      <EndProperty Name="RegularAudits">
+        <ScalarProperty Name="Id" ColumnName="RegularAudit_Id" />
+      </EndProperty>
+      <EndProperty Name="Audits">
+        <ScalarProperty Name="Id" ColumnName="Audits_Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="IRMERAuditsAudits1" TypeName="Model1.IRMERAuditsAudits1" StoreEntitySet="IRMERAuditsAudits1">
+      <EndProperty Name="IRMERAudits">
+        <ScalarProperty Name="Id" ColumnName="IRMERAudit1_Id" />
+      </EndProperty>
+      <EndProperty Name="Audits">
+        <ScalarProperty Name="Id" ColumnName="AuditEvents_Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <edmx:Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+        <DesignerProperty Name="UseLegacyProvider" Value="False" />
+      </DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

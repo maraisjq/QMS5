@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29806.167
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QMS5", "QMS5\QMS5.csproj", "{99C48505-47BB-46C1-A837-A67F9BA802C3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QMS6", "QMS6\QMS6.csproj", "{156672D8-759D-4035-9122-EF1DA7014C6B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{99C48505-47BB-46C1-A837-A67F9BA802C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99C48505-47BB-46C1-A837-A67F9BA802C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99C48505-47BB-46C1-A837-A67F9BA802C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99C48505-47BB-46C1-A837-A67F9BA802C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{156672D8-759D-4035-9122-EF1DA7014C6B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{156672D8-759D-4035-9122-EF1DA7014C6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{156672D8-759D-4035-9122-EF1DA7014C6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{156672D8-759D-4035-9122-EF1DA7014C6B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {31CE45B4-1B79-4705-A71E-71F795E76C68}
+	EndGlobalSection
+EndGlobal

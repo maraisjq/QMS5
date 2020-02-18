@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="7249d7bbcd2b4e6796cf70fa18dce435" Name="Diagram1" >
+        <EntityTypeShape EntityType="Model1.Audits" Width="1.5" PointX="4.625" PointY="0.75" />
+        <EntityTypeShape EntityType="Model1.AuditStatus" Width="1.5" PointX="0.875" PointY="0.875" FillColor="Khaki" />
+        <EntityTypeShape EntityType="Model1.AuditTypes" Width="1.5" PointX="2.75" PointY="0.5" FillColor="255, 255, 128" />
+        <EntityTypeShape EntityType="Model1.AuditPresentations" Width="1.5" PointX="6.75" PointY="5.875" FillColor="0, 192, 192" />
+        <EntityTypeShape EntityType="Model1.Staff" Width="1.5" PointX="6.625" PointY="2.75" FillColor="Fuchsia" />
+        <EntityTypeShape EntityType="Model1.AuditActionPlans" Width="1.5" PointX="8.5" PointY="4.75" FillColor="0, 192, 192" />
+        <EntityTypeShape EntityType="Model1.AuditMethods" Width="1.5" PointX="0.875" PointY="4.125" FillColor="255, 255, 128" />
+        <EntityTypeShape EntityType="Model1.AuditOutcomes" Width="1.5" PointX="0.875" PointY="2.5" FillColor="255, 255, 128" />
+        <EntityTypeShape EntityType="Model1.AuditFrequencies" Width="1.5" PointX="0.875" PointY="5.75" FillColor="255, 255, 128" />
+        <EntityTypeShape EntityType="Model1.AuditStandards" Width="1.5" PointX="4.625" PointY="7.75" FillColor="0, 192, 192" />
+        <EntityTypeShape EntityType="Model1.AuditSOPs" Width="1.5" PointX="10.25" PointY="4.75" FillColor="0, 192, 192" />
+        <EntityTypeShape EntityType="Model1.IRMERAudits" Width="1.5" PointX="2.75" PointY="5.125" />
+        <EntityTypeShape EntityType="Model1.RegularAudits" Width="1.5" PointX="7" PointY="0.5" IsExpanded="true" />
+        <AssociationConnector Association="Model1.IRMERAuditsAuditFrequencies" />
+        <AssociationConnector Association="Model1.AuditsAuditTypes" />
+        <AssociationConnector Association="Model1.AuditPresentationsAudits" />
+        <AssociationConnector Association="Model1.AuditActionPlansAudits" />
+        <AssociationConnector Association="Model1.AuditSOPsAudits" />
+        <AssociationConnector Association="Model1.AuditStandardsAudits" />
+        <AssociationConnector Association="Model1.AuditMethodsAudits" />
+        <AssociationConnector Association="Model1.AuditOutcomesAudits" />
+        <AssociationConnector Association="Model1.AuditStatusAudits" />
+        <AssociationConnector Association="Model1.StaffAudits" />
+        <AssociationConnector Association="Model1.StaffAudits1" />
+        <AssociationConnector Association="Model1.AuditPresentationsStaff" />
+        <AssociationConnector Association="Model1.RegularAuditsAudits" />
+        <AssociationConnector Association="Model1.IRMERAuditsAudits1" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
